@@ -14,8 +14,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.2/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"/>
+    <script
+    src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js">
+  </script>
+
 
 </head>
 <body>
@@ -69,7 +74,7 @@
         </div>
     </section>
 
-    <!-- services section start -->
+      <!-- services section start -->
     <section class="services" id="services">
         <div class="max-width">
             <h2 class="title">My services</h2>
@@ -90,7 +95,7 @@
                 </div>
                 <div class="card">
                     <div class="box">
-                        <i class="fas fa-code"></i>
+                        <i class="fa-solid fa-laptop-code"></i>
                         <div class="text">System Design</div>
                         <p>Proficient in Low Level System Designs</p>
                     </div>
@@ -100,11 +105,86 @@
         </div>
     </section>
 
+<!-- bakend and skills -->
+<section class="skills" id="skills"  >
+    <div class="max-width" >
+        <h2 class="title">My Skills</h2>
+        <div class="skills-content" id="myskills">
+            <div class="column left">
+                <div class="skills-images">
+                    <i class="fa-sharp fa-solid fa-gears"></i>
+                    <h3>Back-End Development</h3>
+                </div>
+                <div class="skills-images">
+                    <i class="fa-sharp fa-solid fa-display"></i>
+                    <h3>Front-End Development</h3>
+                </div>
+            </div>
+          <div class="column right">
+            <div class="skills-images">
+                <i class="fa-brands fa-rocketchat"></i>
+                <h3>Communication</h3>
+            </div>
+            <div class="skills-images">
+                <i class="fa-sharp fa-solid fa-code-merge"></i>
+                <h3>Data-Structures Algorithms</h3>
+            </div>
+          </div>
+           
+        </div>
+       
+    
+    </div>
+</section>
+<!-- calender -->
+<section>
+    <div class="calendar">
+        <!-- Loading stuff -->
+        Loading the data just for you.
+    </div>
+    
+</section>
+
+
+<!-- end calender -->
+<!-- demo -->
+<section class="services" id="services">
+    <div class="max-width">
+       
+        <div class="serv-content">
+            <div class="card">
+                <div class="box">
+                    <i class="fa-solid fa-code-compare"></i>
+                    <div class="text" data-number="0">250</div>
+                    <p>DSA Problems</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <div class="text">3</div>
+                    <p>collabative projects</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <i class="fas fa-code"></i>
+                    <div class="text" data-number="0">1000</div>
+                    <p>hours of coding</p>
+                </div>
+            </div>
+           </div>
+        </div>
+    </div>
+</section>
+
+<!-- end demo -->
+
     <!-- skills section start -->
-    <section class="skills" id="skills">
+    <section class="skills" id="skills" >
         <div class="max-width">
             <h2 class="title">Tech Stack</h2>
-            <div class="skills-content">
+            <div class="skills-content" style="padding-bottom: -01%;">
                 <div class="column left">
 
                     <div class="skills-images" id="java_img">
@@ -143,6 +223,9 @@
                         <img src="./images/javascript.svg" alt="">
                     </div>
 
+                </div>
+            </div>
+        </div>
                 </div>
             </div>
         </div>
@@ -301,7 +384,19 @@
         Niharika.</span>
     </footer>
 
-  
+    <script>
+        GitHubCalendar(".calendar", "sudarshan1309");
+    
+        // or enable responsive functionality:
+        GitHubCalendar(".calendar", "sudarshan1309", { responsive: true });
+    
+        // Use a proxy
+        GitHubCalendar(".calendar", "sudarshan1309", {
+           proxy (sudarshan1309) {
+             return fetch(`https://your-proxy.com/github?user=${sudarshan1309}`)
+           }
+        }).then(r => r.text())
+    </script>
 
     <script src="script.js"></script>
 </body>

@@ -422,7 +422,7 @@ background-size: 10px 10px;
 .skills .skills-content .column {
   width: calc(50% - 30px);
   /* border: 2px solid black; */
-  height: 60vh;
+  height: auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -850,4 +850,17 @@ footer span a:hover {
     font-size: 23px;
     line-height: 38px;
   }
+}
+
+.skills-images .fa-sharp {
+  padding-top: 2rem;
+  font-size: 54px;
+  color: var(--primary-color-dark);
+  color: #fab938;
+}
+.skills-images .fa-brands {
+  padding-top: 2rem;
+  font-size: 54px;
+  color: var(--primary-color-dark);
+  color: #fab938;
 }
